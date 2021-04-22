@@ -1,0 +1,81 @@
+ {
+   "from_mail": "Apparatus",
+   "API_KEY": "123456789",
+   "GMAIL_AUTH": {
+     "user": "noreply@aditya.ac.in",
+     "pass": ""
+   },
+
+
+   "composemail": {
+     "from": "Analysis",
+     "to": "SenderID1<senderemail1@gmail.com>,SenderID2<senderemail2@gmail.com>,",
+     "subject": "Sample subject for email",
+     "html": "<h2>Header1</h2><h3>Header2</h3>Sample Test",
+     "attachments": [{
+         "filename": "text1.txt",
+         "content": "hello world!"
+       },
+       {
+         "filename": "text2.txt",
+         "content": "new Buffer('hello world!','utf-8')"
+       },
+       {
+         "filename": "text3.txt",
+         "path": "/path/to/file.txt"
+       },
+       {
+         "path": "/path/to/file.txt"
+       },
+       {
+         "filename": "text4.txt",
+         "content": "fs.createReadStream('file.txt')"
+       },
+       {
+         "filename": "text.bin",
+         "content": "hello world!",
+         "contentType": "text/plain"
+       },
+       {
+         "filename": "license.txt",
+         "path": "https//google.com/image.jpg"
+       },
+       {
+         "filename": "text1.txt",
+         "content": "aGVsbG8gd29ybGQh",
+         "encoding": "base64"
+       },
+       {
+         "path": "data:text/plain;base64,aGVsbG8gd29ybGQ="
+       }
+     ]
+   },
+
+   "pdfOptions": {
+
+   
+    "directory": "/tmp",      
+    "format": "A4",        
+    "orientation": "portrait", 
+  
+    "paginationOffset": 1,      
+    "header": {
+      "height": "0mm",
+      "contents": "<div></div>"
+    },
+    "footer": {
+      "height": "10mm",
+      "contents": {
+        "default": "<div style='text-align: right;font-size:6px;'><span style='color: #444;'>Created by <strong>Apparatus</strong> [ {{page}} / {{pages}} ]</span></div>"
+
+      }
+    },
+  
+    "type": "pdf",          
+    "quality": "75"        
+  
+  }
+
+
+
+ }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparatus</title>
+</head>
+<body>
+
+
+<h3>Welcome to Apparatus!</h3>
+
+
+
+<h4>Sending Mails</h4>
+<p><strong><a href="/sendmail">/sendmail</a></strong>
+
+<pre>
+
+   {
+    "from": "Analysis",
+    "to": "SenderID1<senderemail1@gmail.com>,SenderID2<senderemail2@gmail.com>,",
+    "subject": "Sample subject for email",
+    "html": "&lt;h2&gt;Header1&lt;/h2&gt;Sample Test",
+  
+    "attachments": [{    //Optional
+        "filename": "text1.txt",
+        "content": "hello world!"
+      },
+      {
+        "filename": "text2.txt",
+        "content": "new Buffer('hello world!','utf-8')"
+      },
+      {
+        "filename": "text3.txt",
+        "path": "/path/to/file.txt"
+      },
+      {
+        "path": "/path/to/file.txt"
+      },
+      {
+        "filename": "text4.txt",
+        "content": "fs.createReadStream('file.txt')"
+      },
+      {
+        "filename": "text.bin",
+        "content": "hello world!",
+        "contentType": "text/plain"
+      },
+      {
+        "filename": "license.txt",
+        "path": "https//google.com/image.jpg"
+      },
+      {
+        "filename": "text1.txt",
+        "content": "aGVsbG8gd29ybGQh",
+        "encoding": "base64"
+      },
+      {
+        "path": "data:text/plain;base64,aGVsbG8gd29ybGQ="
+      }
+    ]
+  }
+</pre>
+
+
+
+<h4>Multiple File Upload Document</h4>
+<p><strong><a href="/uploadfiles">/uploadfiles</a></strong>
+
+
+<pre>
+&lt;form ref='uploadForm' 
+id='uploadForm' 
+action='http://hostname:8000/uploadfiles' 
+method='post' 
+encType='multipart/form-data'&gt;
+&lt;input type='text' name='path' placeholder='/path/'&gt;
+&lt;input type='file' name='filenames' multiple /&gt;
+&lt;input type='submit' value='Upload!' /&gt;
+&lt;/form&gt;
+</pre>
+
+<form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:8000/uploadfiles' 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="text" name="path" placeholder="/path/">
+        <input type="file" name="filenames" multiple />
+        <input type='submit' value='Upload!' />
+</form>     
+
+
+<h4>Single File Upload Document</h4>
+<p><strong><a href="/uploadfile">/uploadfile</a></strong>
+
+<pre>
+&lt;form ref='uploadForm' 
+id='uploadForm' 
+action='http://hostname:8000/uploadfile' 
+method='post' 
+encType='multipart/form-data'&gt;
+&lt;input type="number" name="filesize" placeholder="2 Mb"'&gt;
+&lt;input type='text' name='path' placeholder='/path/'&gt;
+&lt;input type='file' name='filename' /&gt;
+&lt;input type='submit' value='Upload!' /&gt;
+&lt;/form&gt;
+</pre>
+
+<form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:8000/uploadfile' 
+      method='post' 
+      encType="multipart/form-data">
+      <input type="number" name="filesize" placeholder="2 Mb">
+        <input type="text" name="path" placeholder="/path/">
+        <input type="file" name="filename" />
+        <input type='submit' value='Upload!' />
+</form>  
+
+<h4>PDF Creator</h4>
+<p><strong><a href="/createpdf">/createpdf</a></strong>
+
+<pre>
+  {
+    htmltext: "&lt;h2&gt;Header1&lt;/h2&gt;Sample Test",
+    file: sample.pdf, //Optional
+    path: /folder/ //Optional
+
+  }
+</pre>
+
+<br/><br/><br/>
+
+    
+</body>
+</html>
+
+
